@@ -9,6 +9,8 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] GameObject targetPrefab; // It is private and we can also see in the inspector
     int score = 0;
     [SerializeField] Text scoreText;
+    [SerializeField] GameObject winPanel;
+    bool hasWon = false;
 
     private void Awake()
     {
@@ -20,7 +22,16 @@ public class GamePlayManager : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnTarget",1f,1f);
+        winPanel.SetActive(false);
+        InvokeRepeating("SpawnTarget", 1f, 1f);
+    }
+
+    private void Update()
+    {
+        if(hasWon)
+        {
+            CancelInvoke("SpawnTarget");  
+        }
     }
     void SpawnTarget() 
     {
@@ -34,6 +45,11 @@ public class GamePlayManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
+        if (score >= 10)
+        { 
+            winPanel.SetActive(true);
+            hasWon = true;
+        }
     }
 
 }
