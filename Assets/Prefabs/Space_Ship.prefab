@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6499683878919729500}
   - component: {fileID: 8652639627343474251}
   - component: {fileID: 8868509067092596013}
+  - component: {fileID: 1208770335754523929}
   m_Layer: 0
   m_Name: Space_Ship
   m_TagString: Untagged
@@ -120,3 +121,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 6
+--- !u!114 &1208770335754523929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2305432690287798099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a2cc1f70105a14088c355f2c993c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
