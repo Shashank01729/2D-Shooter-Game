@@ -10,5 +10,6 @@ public class ShipManager : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        GamePlayManager.instance.IncrementScore();
     }
 }
