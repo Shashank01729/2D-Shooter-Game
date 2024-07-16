@@ -23,6 +23,11 @@ public class GamePlayManager : MonoBehaviour
     private void Start()
     {
         winPanel.SetActive(false);
+        // InvokeRepeating("SpawnTarget", 1f, 1f);
+    }
+
+    public void startSpawningTargets() 
+    {
         InvokeRepeating("SpawnTarget", 1f, 1f);
     }
 
