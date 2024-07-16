@@ -28,6 +28,7 @@ public class GamePlayManager : MonoBehaviour
 
     public void startSpawningTargets() 
     {
+        scoreText.text = "0";
         InvokeRepeating("SpawnTarget", 1f, 1f);
     }
 
